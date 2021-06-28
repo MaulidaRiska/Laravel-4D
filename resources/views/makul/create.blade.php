@@ -6,18 +6,18 @@
      <div class="row justify-content-center">
          <div class="col-md-12">
              <div class="card">
-                 <div class="card-header">Tambah Makul</div>
+                 <div class="card-header">Tambah Mata Kuliah</div>
                  <div class="card-body">
                  <form method="POST" action="{{ route('simpan.makul')}}">
                  @csrf
                          <div class="form-group">
                             <div class="from row">
                                 <div class="col">
-                                    <label>Kode Matakuliah</label>
+                                    <label>Kode Mata Kuliah</label>
                                     <input type="text" class="form-control" name="Kd_makul" placeholder="Tambahkan Kode Makul">
                                 </div>
                                 <div class="col">
-                                    <label>Nama Matakuliah</label>
+                                    <label>Nama Mata Kuliah</label>
                                     <input type="text" class="form-control" name="Nama_makul" placeholder="Tambahkan Nama Matakuliah">
                                 </div>
                                 <div class="col">
