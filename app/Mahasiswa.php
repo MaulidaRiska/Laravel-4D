@@ -3,11 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+Use Alert;
 
 class Mahasiswa extends Model
 {
     protected $table        = 'mahasiswa';
     protected $fillable     = ['user_id', 'npm', 'tgl_lahir', 'tempat_lahir', 'alamat', 'telpon', 'gender'];
+    public $timestamps      = false;
   
 public function user()
 {

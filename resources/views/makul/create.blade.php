@@ -29,8 +29,8 @@
                         <div class="form group">
                             <div class="form row float-right">
                                 <div class="col">
-                                    <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-                                    <a href="{{ route('makul')}}" class="btn btn-md btn-danger">BATAL</a>
+                                    <button type="submit" class="btn btn-md btn-primary">SIMPAN <i class="fas fa-download"></i></button>
+                                    <a href="{{ route('makul')}}" class="btn btn-md btn-danger">BATAL <i class="fas fa-times"></i></a>
                                 </div>
                             </div>
                         </div>

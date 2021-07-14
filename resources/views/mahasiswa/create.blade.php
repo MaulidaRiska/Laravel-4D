@@ -12,59 +12,62 @@
                  @csrf
 
                  <div class="form-group">
-                            <lable for="nama" class="col-sm-2 control-lable">User ID</lable>
-                            <div class="col-sm-12">
-                            <input type="text" class="form-control" name="user_id"  placeholder="Masukan User ID..." required>
-                            </div>
+                    <div class="form-row">
+                        <div class="col">
+                            <lable for="nama" >Nama Mahasiswa</lable>
+                            <select class="form-control" id="user_id" name="user_id" >
+                                    <option value="" disabled selected  >--Pilih User--</option>
+                                   @foreach ($user as $u)
+                                    <option value="{{$u->id}}">{{$u->name}}</option>
+                                   @endforeach
+                                </select>
                         </div>
-                        <div class="form-group">
-                            <lable for="npm" class="col-sm-2 control-lable">NPM</lable>
-                            <div class="col-sm-12">
-                            <input type="text" class="form-control" name="npm" placeholder="Masukan NPM..." required>
-                            </div>
+                        <div class="col">
+                            <lable for="npm" >NPM</lable>
+                            <input type="number" class="form-control" name="npm" placeholder="Masukan NPM..." maxlength="8">
                         </div>
-                        <di class="form-group">
-                            <lable for="tempat_lahir" class="col-sm-2 control-lable">Tempat Lahir</lable>
-                            <div class="col-sm-12">
-                            <input type="text" class="form-control" name="tempat_lahir" placeholder="Masukan Tempat lahir..." required>
-                            </div>
-                        </di>
-                        <div class="form-group">
-                            <lable for="tgl_lahir" class="col-sm-2 control-lable">Tanggal Lahir</lable>
-                            <div class="col-sm-12">
-                            <input type="date" class="form-control" name="tgl_lahir" placeholder="Masukan Tanggal Lahir..." required>
-                            </div>
+                        <div class="col">
+                            <lable for="tempat_lahir" >Tempat Lahir</lable>
+                            <input type="text" class="form-control" name="tempat_lahir" placeholder="Masukan Tempat lahir..." >
                         </div>
-                        <div class="form-group">
-                            <lable for="alamat" class="col-sm-2 control-lable">Alamat</lable>
-                            <div class="col-sm-12">
-                            <input type="text" class="form-control" name="alamat" placeholder="Masukan Alamat..." required>
-                            </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <lable for="tgl_lahir">Tanggal Lahir</lable>
+                            <input type="date" class="form-control" name="tgl_lahir" placeholder="Masukan Tanggal Lahir..." >        
                         </div>
-                        <div class="form-group">
-                            <lable for="telpon" class="col-sm-2 control-lable">Telpon</lable>
-                            <div class="col-sm-12">
-                            <input type="text" class="form-control" name="telpon" placeholder="Masukan Telpon..." required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="" class="col-sm-2 control-lable">Gender</label>
-                            <div class="col-sm-12">
-                                <select class="custom-select" id="gender" name="gender" required>
-                                    <option selected disabled value="">Pilih Jenis Kelamin...</option>
+                        <div class="col">
+                            <lable for="gander" >Jenis Kelanin</lable>
+                            <select class="form-control" id="gender" name="gender" >
+                                    <option value="" disabled selected  >--Pilih Jenis Kelamin--</option>
                                     <option value="L">Laki-Laki</option>
                                     <option value="P">Perempuan</option>
-                                </select>
-                            </div>
+                            </select>
                         </div>
-                        <div class="form group">
-                            <div class="form row float-right">
-                                <div class="col">
-                                    <button type="submit" class="btn btn-md btn-primary">SIMPAN</button>
-                                    <a href="{{ route('mahasiswa')}}" class="btn btn-md btn-danger">BATAL</a>
+                        <div class="col">
+                            <lable for="telpon" >Telpon</lable>
+                            <input type="text" class="form-control" name="telpon" placeholder="Masukan Telpon..." >
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-row">
+                        <div class="col">
+                            <lable for="alamat">Alamat</lable>
+                            <textarea  class="form-control" name="alamat" id="alamat" cols="2" rows="3" style="resize : none" placeholder="Masukan Alamat..." ></textarea>
+                        </div>
+                    </div>
+                </div>
+                            <div class="form group">
+                                <div class="form row float-right">
+                                    <div class="col">
+                                        <button type="submit" class="btn btn-md btn-primary">SIMPAN <i class="fas fa-download"></i></button>
+                                        <a href="{{ route('mahasiswa')}}" class="btn btn-md btn-danger">BATAL <i class="fas fa-times"></i></a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
                         </form>
                     </div>
                 </div>
