@@ -14,8 +14,8 @@
                         <table class="table table-bordered">
                             <tr>
                                 <th>NO</th>
-                                <th>KODE MAKUL</th>
-                                <th>NAMA MAKUL</th>
+                                <th>KODE MATA KULIAH</th>
+                                <th>NAMA MATA KULIAH</th>
                                 <th>SKS</th>
                                 <th>AKSI</th>
                             </tr>

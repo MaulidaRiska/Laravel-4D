@@ -16,7 +16,7 @@
                                 <th>No</th>
                                 <th>Npm</th>
                                 <th>Nama</th>
-                                <th>Nama Makul</th>
+                                <th>Nama Mata Kuliah</th>
                                 <th>Sks</th>
                                 <th>Nilai</th>
                                 <th>Action</th>
@@ -26,6 +26,7 @@
 
                             @endphp
                             @foreach ($nilai as $ni)
+
                                 <tr>
                                     <td>{{ $no++}}</td>
                                     <td>{{ $ni->mahasiswa->npm}}</td>

@@ -8,7 +8,7 @@
                 <div class="card-header">Tambah Nilai</div>
 
                 <div class="card-body">
-                    <form action="{{route('simpan.nilai')}}" method="post">
+                    <form action="{{route('update.nilai', $nilai->id)}}" method="post">
                         @csrf
 
                         <div class="form grub">
@@ -16,16 +16,16 @@
                             <div class="row">
                                     <label for="mahasiswa">Nama Mahasiswa</label>
                                     <select name="mahasiswa_id" id="mahasiswa_id" class="form-control">
-                                        <option value="" disabled selected>--pilih Nama--</option>
+                                        <option value="" disabled selected>--Pilih Nama Mahasiswa--</option>
                                         @foreach ($mahasiswa as $mhs)
                                             <option value="{{ $mhs->id}}"{{$nilai->mahasiswa_id == $mhs->id ? 'selected': ''}}>{{$mhs->user->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="row">
-                                    <label for="makul">Nama Matkul</label>
+                                    <label for="makul">Nama Mata Kuliah</label>
                                     <select name="makul_id" id="makul_id" class="form-control">
-                                        <option value="" disabled selected>--pilih Nama makul--</option>
+                                        <option value="" disabled selected>--Pilih Nama Mata Kuliah--</option>
                                         @foreach ($makul as $mk)
                                             <option value="{{ $mk->id}}" {{$nilai->makul_id == $mk->id ? 'selected': ''}}>{{$mk->Nama_makul}}</option>
                                         @endforeach

@@ -16,16 +16,16 @@
                             <div class="row">
                                     <label for="mahasiswa">Nama Mahasiswa</label>
                                     <select name="mahasiswa_id" id="mahasiswa_id" class="form-control">
-                                        <option value="" disabled selected>--pilih Nama--</option>
+                                        <option value="" disabled selected>--Pilih Nama Mahasiswa--</option>
                                         @foreach ($mahasiswa as $mhs)
                                             <option value="{{ $mhs->id}}">{{$mhs->user->name}}</option>
                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="row">
-                                    <label for="makul">Nama Matkul</label>
+                                    <label for="makul">Nama Mata Kuliah</label>
                                     <select name="makul_id" id="makul_id" class="form-control">
-                                        <option value="" disabled selected>--pilih Nama makul--</option>
+                                        <option value="" disabled selected>--Pilih Nama Mata Kuliah--</option>
                                         @foreach ($makul as $mk)
                                             <option value="{{ $mk->id}}">{{$mk->Nama_makul}}</option>
                                         @endforeach
