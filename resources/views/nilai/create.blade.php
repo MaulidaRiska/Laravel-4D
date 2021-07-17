@@ -11,9 +11,9 @@
                     <form action="{{route('simpan.nilai')}}" method="post">
                         @csrf
 
-                        <div class="form grub">
-                            <div class="form col">
-                            <div class="row">
+                        <div class="form-group">
+                            <div class="from row">
+                                <div class="col">
                                     <label for="mahasiswa">Nama Mahasiswa</label>
                                     <select name="mahasiswa_id" id="mahasiswa_id" class="form-control">
                                         <option value="" disabled selected>--Pilih Nama Mahasiswa--</option>
@@ -22,7 +22,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="row">
+                                <div class="col">
                                     <label for="makul">Nama Mata Kuliah</label>
                                     <select name="makul_id" id="makul_id" class="form-control">
                                         <option value="" disabled selected>--Pilih Nama Mata Kuliah--</option>
@@ -31,11 +31,12 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="row">
+                                <div class="col">
                                     <label for="nilai">Nilai</label>
                                     <input type="number" name="nilai" class="form-control" placeholder="Tambahkan nilai" > 
                                 </div>
                             </div>
+                        </div>
                             <div class="form-grub float-right">
                                 <div class="form-row">
                                     <div class="col">

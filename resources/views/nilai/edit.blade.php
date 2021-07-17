@@ -5,15 +5,15 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
             <div class="card">
-                <div class="card-header">Tambah Nilai</div>
+                <div class="card-header">Edit Nilai</div>
 
                 <div class="card-body">
                     <form action="{{route('update.nilai', $nilai->id)}}" method="post">
                         @csrf
 
-                        <div class="form grub">
-                            <div class="form col">
-                            <div class="row">
+                        <div class="form-group">
+                            <div class="from row">
+                                <div class="col">
                                     <label for="mahasiswa">Nama Mahasiswa</label>
                                     <select name="mahasiswa_id" id="mahasiswa_id" class="form-control">
                                         <option value="" disabled selected>--Pilih Nama Mahasiswa--</option>
@@ -22,7 +22,7 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="row">
+                                <div class="col">
                                     <label for="makul">Nama Mata Kuliah</label>
                                     <select name="makul_id" id="makul_id" class="form-control">
                                         <option value="" disabled selected>--Pilih Nama Mata Kuliah--</option>
@@ -31,25 +31,25 @@
                                         @endforeach
                                     </select>
                                 </div>
-                                <div class="row">
+                                <div class="col">
                                     <label for="nilai">Nilai</label>
                                     <input type="number" name="nilai" class="form-control" placeholder="Tambahkan nilai" value="{{is_null($nilai) ? '' : $nilai->Nilai}}"> 
                                 </div>
                             </div>
                         </div>
-                            <div class="form group">
-                                <div class="form row float-right">
-                                    <div class="col">
-                                        <button type="submit" class="btn btn-md btn-primary">SIMPAN <i class="fas fa-download"></i></button>
-                                        <a href="{{route('nilai')}}" class="btn btn-md btn-danger">BATAL <i class="fas fa-times"></i></a>
-                                    </div>
+                        <div class="form group">
+                            <div class="form row float-right">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-md btn-primary">SIMPAN <i class="fas fa-download"></i></button>
+                                    <a href="{{ route('nilai')}}" class="btn btn-md btn-danger">BATAL <i class="fas fa-times"></i></a>
                                 </div>
                             </div>
                         </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection
+                     </form>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+ @endsection
+                        
